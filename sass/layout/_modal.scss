@@ -34,43 +34,43 @@
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: #757575;
-}
 
-.modal-title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: calc(20 / 23);
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-}
-
-.modal-close-btn {
-  position: absolute;
-  display: block;
-  right: 8px;
-  top: 8px;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  height: 30px;
-  width: 30px;
-
-  &:hover {
-    fill: var(--accent-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(20 / 23);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
   }
-}
 
-.modal-form {
-  padding: 0 40px;
+  &-close-btn {
+    position: absolute;
+    display: block;
+    right: 8px;
+    top: 8px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 30px;
+    width: 30px;
+
+    &:hover {
+      fill: var(--accent-color);
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  &-form {
+    padding: 0 40px;
+  }
 }
 
 .user-data {
@@ -153,6 +153,16 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+
+  &-link {
+    margin-left: 4px;
+    color: var(--accent-color);
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
 }
 
 .check-icon {
@@ -183,16 +193,6 @@
   border: 2px solid #212121;
   border-radius: 2px;
   margin-right: 4px;
-}
-
-.terms-of-use-link {
-  margin-left: 4px;
-  color: var(--accent-color);
-  text-decoration: underline;
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
 }
 
 .btn-send {

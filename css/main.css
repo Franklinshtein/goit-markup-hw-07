@@ -35,7 +35,6 @@ dd {
   line-height: 1.14;
   letter-spacing: 0.02em;
   display: flex;
-  /* поставив елементи хедера в ряд */
   align-items: center;
   border-bottom: 1px solid #ececec;
   justify-content: center;
@@ -73,6 +72,11 @@ p {
   color: var(--text-color-gray);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .flex {
   display: flex;
   padding-left: 0px;
@@ -106,32 +110,27 @@ p {
   padding-right: 15px;
 }
 
-.nav-main {
+.nav {
   display: flex;
   align-items: center;
   margin-left: 93px;
 }
-
 .nav-list {
   display: flex;
   align-items: center;
   padding-left: 0px;
 }
-
 .nav-list_item li:not(:last-child) {
   margin-right: 50px;
 }
-
 .nav-list_item:not(:last-child) {
   margin-right: 50px;
 }
-
 .nav_link {
   padding-top: 32px;
   padding-bottom: 32px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .nav_link.current {
   color: var(--accent-color);
 }
@@ -168,31 +167,25 @@ p {
   margin-bottom: 20px;
 }
 
-.contacts {
+.contact {
   display: flex;
   margin-left: auto;
   justify-content: center;
   align-items: center;
 }
-
 .contact_item {
+  color: var(--text-color-gray);
   display: block;
 }
 .contact_item:not(:last-child) {
   margin-right: 50px;
 }
-
 .contact_link {
   display: flex;
   align-items: center;
   justify-content: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.contacts li {
-  color: var(--text-color-gray);
-}
-
 .contact_icon {
   fill: currentColor;
   margin-right: 10px;
@@ -269,15 +262,6 @@ p {
   margin-bottom: 30px;
 }
 
-.about {
-  padding-top: 0;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
 .title {
   font-weight: 700;
   font-size: 36px;
@@ -310,6 +294,7 @@ img {
 
 .about {
   font-size: 14px;
+  padding-top: 0;
 }
 
 .about-item {
@@ -457,6 +442,10 @@ footer {
   background-color: var(--background-color);
 }
 
+.container.footer {
+  display: flex;
+}
+
 address {
   margin-top: 20px;
   font-style: normal;
@@ -465,6 +454,10 @@ address {
 address ul {
   padding-left: 0px;
   margin: 0px;
+}
+
+.address-container {
+  margin-right: 70px;
 }
 
 .address {
@@ -478,14 +471,6 @@ address ul {
 
 .address-item:not(:last-child) {
   margin-bottom: 9px;
-}
-
-.container.footer {
-  display: flex;
-}
-
-.address-container {
-  margin-right: 70px;
 }
 
 .join-us {
@@ -527,7 +512,7 @@ address ul {
   padding-left: 15px;
 }
 
-.footer-btn {
+.subscribe-btn {
   display: inline-flex;
   align-items: center;
   text-align: center;
@@ -546,7 +531,7 @@ address ul {
   color: #ffffff;
   cursor: pointer;
 }
-.footer-btn:hover, .footer-btn:focus {
+.subscribe-btn:hover, .subscribe-btn:focus {
   background: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -598,7 +583,6 @@ address ul {
   letter-spacing: 0.01em;
   color: #757575;
 }
-
 .modal-title {
   font-style: normal;
   font-weight: 700;
@@ -608,7 +592,6 @@ address ul {
   letter-spacing: 0.03em;
   color: #212121;
 }
-
 .modal-close-btn {
   position: absolute;
   display: block;
@@ -630,7 +613,6 @@ address ul {
   fill: var(--accent-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-form {
   padding: 0 40px;
 }
@@ -712,6 +694,14 @@ address ul {
   justify-content: center;
   align-items: center;
 }
+.terms-of-use-link {
+  margin-left: 4px;
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+.terms-of-use-link:hover, .terms-of-use-link:focus {
+  text-decoration: none;
+}
 
 .check-icon {
   fill: transparent;
@@ -739,15 +729,6 @@ address ul {
   border: 2px solid #212121;
   border-radius: 2px;
   margin-right: 4px;
-}
-
-.terms-of-use-link {
-  margin-left: 4px;
-  color: var(--accent-color);
-  text-decoration: underline;
-}
-.terms-of-use-link:hover, .terms-of-use-link:focus {
-  text-decoration: none;
 }
 
 .btn-send {

@@ -25,6 +25,11 @@ p {
   color: var(--text-color-gray);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .flex {
   display: flex;
   padding-left: 0px;

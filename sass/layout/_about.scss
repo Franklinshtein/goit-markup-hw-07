@@ -1,0 +1,32 @@
+.about {
+  font-size: 14px;
+}
+
+.about-item {
+  flex-basis: calc((100% - var(--gap) * (var(--cols) - 1)) / var(--cols));
+  position: relative;
+  &_img {
+    position: relative;
+  }
+  &_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background: rgba(47, 48, 58, 0.8);
+  }
+  &_descrip {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}

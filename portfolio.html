@@ -19,7 +19,7 @@
     />
 
     <!-- стилі -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
 
     <title>Портфолио</title>
   </head>
@@ -30,35 +30,35 @@
         <a class="logo" href="./index.html"
           >Web<span class="logo-color-up">Studio</span></a
         >
-        <nav class="main-nav">
+        <nav class="nav-main">
           <ul class="nav-list">
-            <li class="nav-list-item">
-              <a class="navigation" href="./index.html">Студия</a>
+            <li class="nav-list_item">
+              <a class="nav_link" href="./index.html">Студия</a>
             </li>
-            <li class="nav-list-item">
-              <a class="navigation current" href="./portfolio.html"
+            <li class="nav-list_item">
+              <a class="nav_link current" href="./portfolio.html"
                 >Портфолио</a
               >
             </li>
-            <li class="nav-list-item">
-              <a class="navigation" href="#link">Контакты</a>
+            <li class="nav-list_item">
+              <a class="nav_link" href="#link">Контакты</a>
             </li>
           </ul>
         </nav>
 
         <ul class="contacts">
-          <li class="contact-item">
-            <a class="contact-link" href="mailto:info@devstudio.com">
-              <svg width="16" height="12" class="heder-icon">
+          <li class="contact_item">
+            <a class="contact_link" href="mailto:info@devstudio.com">
+              <svg width="16" height="12" class="contact_icon">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
 
-          <li class="contact-item">
-            <a class="contact-link" href="tel:+380961111111">
-              <svg width="10" height="16" class="heder-icon">
+          <li class="contact_item">
+            <a class="contact_link" href="tel:+380961111111">
+              <svg width="10" height="16" class="contact_icon">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +380961111111</a
@@ -75,19 +75,19 @@
           <h1 class="visually-hidden">Портфолио</h1>
 
           <ul class="porfolio-nav">
-            <li class="portfolio-filter">
+            <li class="porfolio-nav_filter">
               <button class="button-style" type="button">Все</button>
             </li>
-            <li class="portfolio-filter">
+            <li class="porfolio-nav_filter">
               <button class="button-style" type="button">Веб-сайты</button>
             </li>
-            <li class="portfolio-filter">
+            <li class="porfolio-nav_filter">
               <button class="button-style" type="button">Приложения</button>
             </li>
-            <li class="portfolio-filter">
+            <li class="porfolio-nav_filter">
               <button class="button-style" type="button">Дизайн</button>
             </li>
-            <li class="portfolio-filter">
+            <li class="porfolio-nav_filter">
               <button class="button-style" type="button">Маркетинг</button>
             </li>
           </ul>
@@ -363,8 +363,8 @@
                 >
               </li>
               <li class="address-item">
-                <a class="address-link" href="tel:+380961111111"
-                  >+380961111111</a
+                <a class="address-link" href="tel:+380961111111">
+                  +380961111111</a
                 >
               </li>
             </ul>
@@ -374,7 +374,7 @@
           <p class="join-us">присоединяйтесь</p>
           <ul class="socials-list">
             <li class="socials-item">
-              <a href="#" class="socials-link">
+              <a href="#" class="socials-link" aria-label="instagram">
                 <svg width="20" height="20" class="socials-icon">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
@@ -382,7 +382,7 @@
             </li>
 
             <li class="socials-item">
-              <a href="#" class="socials-link">
+              <a href="#" class="socials-link" aria-label="twitter">
                 <svg width="20" height="20" class="socials-icon">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
@@ -390,7 +390,7 @@
             </li>
 
             <li class="socials-item">
-              <a href="#" class="socials-link">
+              <a href="#" class="socials-link" aria-label="fecebook">
                 <svg width="20" height="20" class="socials-icon">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
@@ -398,7 +398,7 @@
             </li>
 
             <li class="socials-item">
-              <a href="#" class="socials-link">
+              <a href="#" class="socials-link" aria-label="linkedin">
                 <svg width="20" height="20" class="socials-icon">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
@@ -406,19 +406,22 @@
             </li>
           </ul>
         </div>
-        <form class="subscribe-us">
-          <h3 class="join-us">подпишитесь на рассылку</h3>
-          <div class="justify-btn">
-            <label for="email"></label>
-            <input type="email" name="email" placeholder="E-mail" id="email">
-            <button type="submit" class="footer-btn">Подписаться
-              <svg width="24" height="24" class="subscribe-icon">
-                <use href="./images/icons.svg#icon-icon-send"></use>
-            </button>
-          </div>
-          </svg>
-        </form>
+
+<form class="subscribe-us">
+  <h3 class="join-us">подпишитесь на рассылку</h3>
+  <div class="justify-btn">
+  <label for="email"></label>
+  <input class="subscribe-input" type="email" name="email" placeholder="E-mail" id="email">
+  <button type="submit" class="footer-btn">Подписаться
+<svg width="24" height="24" class="subscribe-icon">
+  <use href="./images/icons.svg#icon-icon-send"></use>
+  </button>
+</div>
+</svg>
+</form>
+
       </div>
     </footer>
+
   </body>
 </html>

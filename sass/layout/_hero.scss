@@ -1,4 +1,4 @@
-.hero-section {
+.hero {
   background-color: var(--background-color);
   margin: 0 auto;
   padding-top: 200px;
@@ -16,24 +16,20 @@
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-}
 
-.hero-text {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-color-white);
-  text-align: center;
-  margin-bottom: 30px;
+  &__text {
+    @include fontProperties(900, 44px, 1.36);
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-color-white);
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
 
 .title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  @include fontProperties(700, 36px, 1.16);
   text-align: center;
   margin-bottom: 50px;
 }

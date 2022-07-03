@@ -1,3 +1,4 @@
+@import "./utils/placeholder";
 @import "./utils/variables";
 @import "./base/reset";
 @import "./layout/header";
@@ -8,11 +9,11 @@
 @import "./components/logo";
 @import "./components/contacts";
 @import "./components/btn";
-@import "./base/section";
 @import "./layout/hero";
 @import "./layout/description";
 @import "./layout/about";
 @import "./layout/team";
+@import "./components/socials";
 @import "./layout/clients";
 @import "./layout/footer";
 @import "./layout/modal";

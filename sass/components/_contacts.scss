@@ -1,8 +1,6 @@
 .contact {
-  display: flex;
+  @include flexCentr;
   margin-left: auto;
-  justify-content: center;
-  align-items: center;
 
   &_item {
     color: var(--text-color-gray);

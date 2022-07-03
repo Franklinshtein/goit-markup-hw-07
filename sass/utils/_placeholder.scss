@@ -1,0 +1,23 @@
+%fontPrimary {
+  font-family: "Roboto", sans-serif; /* основний шрифт сайту */
+  font-size: 16px;
+  color: var(--primary-text-color);
+  letter-spacing: 0.03em;
+}
+
+%section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+@mixin flexCentr($fl: flex, $ai: center, $jc: center) {
+  display: $fl;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin fontProperties($fw, $fz, $lh) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+}

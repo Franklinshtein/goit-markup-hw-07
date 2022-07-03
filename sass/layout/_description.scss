@@ -1,21 +1,17 @@
-.benefits-item {
+.benefits__item {
   flex-basis: calc((100% - var(--gap) * (4 - 1)) / 4);
 }
 
-.benefits-icon_wrap {
-  display: flex;
+.benefits__wrap {
+  @include flexCentr;
   height: 120px;
-  justify-content: center;
-  align-items: center;
   border-radius: 4px;
   background-color: var(--button-background);
   margin-bottom: 30px;
 }
 
-.benefits-item_descrip {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+.benefits__descrip {
+  @include fontProperties(700, 14px, 1.14);
   text-transform: uppercase;
   margin-bottom: 10px;
 }

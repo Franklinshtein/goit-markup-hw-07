@@ -1,7 +1,5 @@
-.porfolio-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.portfolio {
+  @include flexCentr;
   padding: 0px;
   margin: 0 auto 50px;
 
@@ -12,31 +10,34 @@
       color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &_filter {
+  &__filter {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-    display: flex;
-    text-align: center;
+    @include flexCentr;
 
     &:not(:first-child) {
       margin-left: 8px;
     }
   }
-}
 
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  padding: 0px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    padding: 0px;
 
-  & li:nth-child(3n) {
-    margin-right: 0px;
+    & li:nth-child(3n) {
+      margin-right: 0px;
+    }
+
+    & li:nth-last-child(-n + 3) {
+      margin-bottom: 0px;
+    }
   }
 
-  & li:nth-last-child(-n + 3) {
-    margin-bottom: 0px;
+  &__descripion {
+    @include fontProperties(700, 18px, 2);
   }
 }
 
@@ -44,43 +45,37 @@
   flex-basis: calc((100% - var(--gap) * (var(--cols))) / var(--cols));
   margin-right: 30px;
   margin-bottom: 30px;
-}
 
-.item-link {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &__link {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
-    outline: none;
-    color: inherit;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      outline: none;
+      color: inherit;
+    }
+
+    &:hover .overlay,
+    &:focus .overlay {
+      transition: transform 250ms var(--timing-function);
+      transform: translateY(0%);
+      transition-delay: 0ms;
+    }
   }
 
-  &:hover .overlay,
-  &:focus .overlay {
-    transition: transform 250ms var(--timing-function);
-    transform: translateY(0%);
-    transition-delay: 0ms;
+  &__description {
+    margin-top: 4px;
   }
-}
 
-.items-border {
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  padding: 20px 24px;
-}
-
-.portfolio-descripion {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-}
-
-.item-description {
-  margin-top: 4px;
+  &__border {
+    border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    padding: 20px 24px;
+  }
 }
 
 .card-thumb {
@@ -96,9 +91,7 @@
   width: 100%;
   height: 100%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCentr;
 
   transition: transform 250ms var(--timing-function);
   transform: translateY(101%);
@@ -106,9 +99,7 @@
 }
 
 .relation {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.5;
+  @include fontProperties(400, 18px, 1.5);
   color: var(--text-color-white);
   letter-spacing: 0.03em;
 

@@ -27,33 +27,27 @@
   padding-top: 40px;
   width: 528px;
   height: 581px;
-
   margin-top: 30px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: calc(14 / 12);
+  @include fontProperties(400, 12px, 1.17);
   letter-spacing: 0.01em;
   color: #757575;
 
-  &-title {
+  &__title {
     font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: calc(20 / 23);
+    @include fontProperties(700, 20px, 1.15);
     text-align: center;
     letter-spacing: 0.03em;
     color: #212121;
   }
 
-  &-close-btn {
+  &__close-btn {
     position: absolute;
     display: block;
     right: 8px;
     top: 8px;
-    display: flex;
+    @include flexCentr;
     align-content: center;
-    justify-content: center;
-    align-items: center;
+
     background-color: #ffffff;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 1);
@@ -68,7 +62,7 @@
     }
   }
 
-  &-form {
+  &__form {
     padding: 0 40px;
   }
 }
@@ -76,9 +70,7 @@
 .user-data {
   display: block;
   position: relative;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: calc(14 / 12);
+  @include fontProperties(400, 12px, 1.17);
   letter-spacing: 0.01em;
   color: #757575;
   margin-top: 10px;
@@ -94,9 +86,7 @@
   resize: none;
   margin-top: 4px;
   font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: calc(14 / 12);
+  @include fontProperties(400, 12px, 1.17);
   letter-spacing: 0.01em;
   padding: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -118,7 +108,7 @@
   transform: translateY(-50%);
 }
 
-.modal-input {
+.modal__input {
   width: 100%;
   height: 40px;
   padding-left: 30px;
@@ -145,14 +135,9 @@
 }
 
 .terms-of-use {
-  display: flex;
+  @include flexCentr;
+  @include fontProperties(400, 14px, 1.71);
   margin-top: 20px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
 
   &-link {
     margin-left: 4px;
@@ -165,28 +150,22 @@
   }
 }
 
-.check-icon {
-  fill: transparent;
-}
-
-.terms-check:checked + .chek-text {
+.terms-check:checked + .chek__text {
   background-color: var(--accent-color);
   border: none;
 
-  & .check-icon {
+  & .check__icon {
     fill: #ffffff;
     border-radius: 2px;
   }
 }
 
-.terms-check:focus + .chek-text {
+.terms-check:focus + .chek__text {
   border-color: var(--accent-color);
 }
 
-.chek-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.chek__text {
+  @include flexCentr;
   width: 16px;
   height: 15px;
 
@@ -195,12 +174,23 @@
   margin-right: 4px;
 }
 
-.btn-send {
-  display: flex;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
+.check__icon {
+  fill: transparent;
+}
+
+.btn__send {
+  @include flexCentr;
+  @include fontProperties(700, 16px, 1.87);
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  background-color: var(--accent-color);
+  color: var(--text-color-white);
+  cursor: pointer;
+
+  margin: 30px auto auto auto;
   padding: 10px 55px;
+
   box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
   border: none;
   border-radius: 4px;

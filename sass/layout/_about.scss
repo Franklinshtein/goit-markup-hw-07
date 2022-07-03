@@ -1,18 +1,15 @@
 .about {
   font-size: 14px;
   padding-top: 0;
-}
-
-.about-item {
-  flex-basis: calc((100% - var(--gap) * (var(--cols) - 1)) / var(--cols));
-  position: relative;
-  &_img {
+  &__item {
+    flex-basis: calc((100% - var(--gap) * (var(--cols) - 1)) / var(--cols));
     position: relative;
   }
-  &_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &__img {
+    position: relative;
+  }
+  &__box {
+    @include flexCentr;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
@@ -22,12 +19,10 @@
     bottom: 0px;
     background: rgba(47, 48, 58, 0.8);
   }
-  &_descrip {
+  &__descrip {
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+    @include fontProperties(700, 14px, 1.14);
   }
 }

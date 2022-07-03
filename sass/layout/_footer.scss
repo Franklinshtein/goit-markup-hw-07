@@ -16,38 +16,33 @@ address {
   font-style: normal;
 }
 
-address ul {
-  padding-left: 0px;
-  margin: 0px;
-}
-
-.address-container {
-  margin-right: 70px;
-}
-
 .address {
   color: var(--text-color-white);
-}
+  &__list {
+    padding-left: 0px;
+    margin: 0px;
+  }
+  &__container {
+    margin-right: 70px;
+  }
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.address-link {
-  color: rgba(255, 255, 255, 0.6);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.address-item:not(:last-child) {
-  margin-bottom: 9px;
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .join-us {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  @include fontProperties(700, 14px, 1.14);
   text-transform: uppercase;
   color: var(--text-color-white);
   margin-bottom: 20px;
 }
 
-.join .socials-link {
+.join .socials__link {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--text-color-white);
   &:hover {
@@ -56,11 +51,41 @@ address ul {
   }
 }
 
-.subscribe-us {
+.subscribe {
   margin-left: auto;
-}
-.subscribe-input {
-  color: #ffffff;
+  &__input {
+    color: #ffffff;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin-left: 12px;
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    @include fontProperties(700, 16px, 1.87);
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background: #188ce8;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+    }
+  }
+
+  &__icon {
+    margin-left: 10px;
+  }
 }
 
 #email {
@@ -74,42 +99,4 @@ address ul {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
-}
-
-.subscribe-btn {
-  display: inline-flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  margin-left: 12px;
-  background-color: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  width: 200px;
-  height: 50px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    background: #188ce8;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-  }
-}
-
-.subscribe-icon {
-  margin-left: 10px;
-}
-
-.justify-btn {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
 }

@@ -1,8 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif; /* основний шрифт сайту */
-  font-size: 16px;
-  color: var(--primary-text-color);
-  letter-spacing: 0.03em;
+  @extend %fontPrimary;
 }
 
 li {
@@ -28,6 +25,10 @@ p {
 img {
   display: block;
   max-width: 100%;
+}
+
+.section {
+  @extend %section;
 }
 
 .flex {

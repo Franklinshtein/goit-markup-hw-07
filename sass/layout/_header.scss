@@ -1,15 +1,10 @@
 .header {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  @include flexCentr;
+  @include fontProperties(500, 14px, 1.14);
   letter-spacing: 0.02em;
-
-  display: flex;
-  align-items: center;
   border-bottom: 1px solid #ececec;
-  justify-content: center;
+
   & .container {
-    display: flex;
-    align-items: center;
+    @include flexCentr;
   }
 }

@@ -1,31 +1,27 @@
-.clients-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.clients__list {
+  @include flexCentr($fl: flex, $ai: center, $jc: space-between);
   padding: 0px;
   color: #afb1b8;
 }
 
-.clients-icon {
+.clients__icon {
   fill: currentColor;
 }
 
-.clients-item {
+.clients__item {
   flex-basis: calc((100% - var(--gap) * (6 - 1)) / 6);
   &:not(:last-child) {
     margin-right: var(--gap);
   }
 }
 
-.clients-link {
-  display: flex;
+.clients__link {
+  @include flexCentr;
   height: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  align-items: center;
-  justify-content: center;
   transition: border-color 250ms var(--timing-function),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,

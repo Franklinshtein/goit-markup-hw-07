@@ -11,9 +11,7 @@
   }
 
   &__filter {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
+    @include fontProperties(500, 16px, 1.62);
     @include flexCentr;
 
     &:not(:first-child) {

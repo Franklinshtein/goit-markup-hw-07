@@ -8,16 +8,18 @@
     border-radius: 0px 0px 4px 4px;
     background-color: #ffffff;
   }
-}
 
-.name {
-  @include fontProperties(500, 16px, 1.18);
-  justify-content: space-between;
-  text-align: center;
-  margin-bottom: 10px;
+  &__name {
+    @include fontProperties(500, 16px, 1.18);
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
   &__wrap {
     padding: 30px;
   }
+
   &__job {
     text-align: center;
     line-height: 1.18;

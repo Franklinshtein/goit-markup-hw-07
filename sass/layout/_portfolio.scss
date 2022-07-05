@@ -34,54 +34,53 @@
     }
   }
 
-  &__descripion {
+  &__title {
     @include fontProperties(700, 18px, 2);
   }
 }
 
-.item {
+.portfolio__item {
   flex-basis: calc((100% - var(--gap) * (var(--cols))) / var(--cols));
   margin-right: 30px;
   margin-bottom: 30px;
+}
+.portfolio__link {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &__link {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-      outline: none;
-      color: inherit;
-    }
-
-    &:hover .overlay,
-    &:focus .overlay {
-      transition: transform 250ms var(--timing-function);
-      transform: translateY(0%);
-      transition-delay: 0ms;
-    }
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    outline: none;
+    color: inherit;
   }
 
-  &__description {
-    margin-top: 4px;
-  }
-
-  &__border {
-    border-bottom: 1px solid #eeeeee;
-    border-left: 1px solid #eeeeee;
-    border-right: 1px solid #eeeeee;
-    padding: 20px 24px;
+  &:hover .portfolio__overlay,
+  &:focus .portfolio__overlay {
+    transition: transform 250ms var(--timing-function);
+    transform: translateY(0%);
+    transition-delay: 0ms;
   }
 }
 
-.card-thumb {
+.portfolio__descripion {
+  margin-top: 4px;
+}
+
+.portfolio__border {
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  padding: 20px 24px;
+}
+
+.portfolio__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.overlay {
+.portfolio__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -96,7 +95,7 @@
   background: rgba(33, 150, 243, 0.9);
 }
 
-.relation {
+.portfolio__relation {
   @include fontProperties(400, 18px, 1.5);
   color: var(--text-color-white);
   letter-spacing: 0.03em;

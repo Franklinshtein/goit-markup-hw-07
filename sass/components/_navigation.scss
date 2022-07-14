@@ -1,6 +1,15 @@
 .nav {
-  @include flexCentr($fl: flex, $ai: center, $jc: null);
-  margin-left: 93px;
+  @media screen and (min-width: $mobile-width) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    margin-left: 83px;
+  }
+  @media screen and (min-width: $desktop-width) {
+    @include flexCentr($fl: flex, $ai: center, $jc: null);
+    margin-left: 93px;
+  }
 
   &__list {
     @include flexCentr($fl: flex, $ai: center, $jc: null);

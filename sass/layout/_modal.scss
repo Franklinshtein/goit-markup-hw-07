@@ -32,6 +32,17 @@
   letter-spacing: 0.01em;
   color: #757575;
 
+  @media screen and (min-width: $mobile-width) {
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (min-width: $tablet-width) {
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (min-width: $desktop-width) {
+  }
+
   &__title {
     font-style: normal;
     @include fontProperties(700, 20px, 1.15);
